@@ -25,29 +25,23 @@
         }
     </script>
 
-  // Theme Toggle Logic
-const toggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-
-// Check local storage or system preference on load
-if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-    themeIcon.className = 'fa-solid fa-sun';
-} else {
-    document.documentElement.classList.remove('dark');
-    themeIcon.className = 'fa-solid fa-moon';
-}
-
-// Handle click event
-toggleBtn.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
+     </div>
+</section>
     
-    if (document.documentElement.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        themeIcon.className = 'fa-solid fa-sun';
-    } else {
-        localStorage.setItem('theme', 'light');
-        themeIcon.className = 'fa-solid fa-moon';
+
+    <style>
+        .fluid-title {
+            font-size: clamp(1.5rem, 3vw + 1rem, 2.75rem);
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; color: black !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200">
+
+    
     }
 });
 <script>
