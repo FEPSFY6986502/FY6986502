@@ -55,4 +55,24 @@ toggleBtn.addEventListener('click', () => {
     }
 });
 <script>
-  
+
+function switchView(viewName) {
+    const reportView = document.getElementById('view-report');
+    const portfolioView = document.getElementById('view-portfolio');
+    const btnReport = document.getElementById('btn-report');
+    const btnPortfolio = document.getElementById('btn-portfolio');
+
+    if (viewName === 'report') {
+        reportView.classList.remove('hidden');
+        portfolioView.classList.add('hidden');
+        
+        btnReport.className = "px-5 py-2.5 rounded-lg font-medium text-sm bg-brand-600 text-white transition-all shadow-sm";
+        btnPortfolio.className = "px-5 py-2.5 rounded-lg font-medium text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-all shadow-sm";
+    } else {
+        reportView.classList.add('hidden');
+        portfolioView.classList.remove('hidden');
+        
+        btnPortfolio.className = "px-5 py-2.5 rounded-lg font-medium text-sm bg-brand-600 text-white transition-all shadow-sm";
+        btnReport.className = "px-5 py-2.5 rounded-lg font-medium text-sm bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 transition-all shadow-sm";
+    }
+}
