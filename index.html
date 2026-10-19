@@ -1,29 +1,29 @@
  <!DOCTYPE html>
-
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The New Urban Planning Standard or Eco-Gentrification? A Report on the Land Use, Livability and Equity in Barcelona's Superblocks</title>
 
- <style for tables>
-  <style>
-  table {
-   font family: arial, sans serif;
-   border-collapse: collapse;
-   width 30%;
-
-  }
-  td, th
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  fluid-title {
-    font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
-}
- </script>
-    
- <button id="theme-toggle" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-    <i id="theme-icon" class="fa-solid fa-moon"></i>
-</button>
+ <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
   // Theme Toggle Logic
 const toggleBtn = document.getElementById('theme-toggle');
