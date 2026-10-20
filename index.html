@@ -1,11 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The New Urban Planning Standard or Eco-Gentrification? A Report on the Land Use, Livability and Equity in Barcelona's Superblocks</title>
+    <title>The New Urban Planning Standard or Eco-Gentrification? A Report on Land Use, Livability and Equity in Barcelona's Superblocks</title>
 
- <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -25,17 +25,10 @@
         }
     </script>
 
- <div id="Introduction_InText">
-...
-</div>
+    <!-- FontAwesome CDN (Fixed placement) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-<div id="Analysis_InText">
-...
-</div>
- 
- <style>   
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Custom Styles -->
     <style>
         .fluid-title {
             font-size: clamp(1.5rem, 3vw + 1rem, 2.75rem);
@@ -48,7 +41,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 </head>
 <body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200">
 
-  <!-- TOP READING PROGRESS BAR -->
+    <!-- TOP READING PROGRESS BAR -->
     <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-200 dark:bg-slate-800 z-50 no-print">
         <div id="reading-bar" class="h-full bg-brand-500 w-0 transition-all duration-75"></div>
     </div>
@@ -74,84 +67,89 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             </div>
         </div>
     </header>
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-    <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
-</button>
-<script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6986502';
-        const repo = 'FY6906502';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+
+    <!-- CONTENT SECTIONS (Moved properly inside <body>) -->
+    <main class="max-w-4xl mx-auto px-4 py-8 space-y-6">
+        
+        <div id="Introduction_InText" class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h2 class="font-bold text-lg mb-2">Introduction</h2>
+            <p>Barcelona's superblocks represent a radical shift in urban design, prioritizing pedestrian spaces over vehicular traffic...</p>
+        </div>
+
+        <div id="Analysis_InText" class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700">
+            <h2 class="font-bold text-lg mb-2">Analysis</h2>
+            <p>While livability metrics show improvements in air quality and noise reduction, questions regarding socio-economic equity remain...</p>
+        </div>
+
+        <!-- Word Count Display -->
+        <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700">
+            <p id="totalWordCount" class="font-semibold text-sm"></p>
+        </div>
+
+        <!-- Last Commit Time Display -->
+        <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 flex items-center justify-between">
+            <span id="last-updated" class="text-sm text-slate-600 dark:text-slate-400">Loading last update time...</span>
+            <button onclick="verifyLastUpdatedTime()" class="px-3 py-1.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-medium">
+                Verify Time
+            </button>
+        </div>
+
+    </main>
+
+    <!-- JAVASCRIPT FUNCTIONS -->
+    <script>
+        // 1. Word Count Functions
+        function displayWordCount(sectionId) {
+            const el = document.getElementById(sectionId);
+            if (!el) return 0;
+            const text = el.textContent;
+            return text.trim().split(/\s+/).filter(Boolean).length;
         }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
-</script>
 
+        function displayTotalWordCount() {
+            const introCount = displayWordCount("Introduction_InText");
+            const analysisCount = displayWordCount("Analysis_InText");
+            const total = introCount + analysisCount;
+            document.getElementById("totalWordCount").innerText = `Total word count: ${total} words`;
+        }
 
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>
+        // 2. GitHub Last Commit Functions
+        async function getLastUpdatedTime() {
+            const username = 'FEPSFY6986502';
+            const repo = 'FY6906502';
+            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+            
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: { 'Accept': 'application/vnd.github.v3+json' }
+                });
+                if (!response.ok) throw new Error(`Status: ${response.status}`);
+                const commits = await response.json();
+                
+                if (commits && commits.length > 0) {
+                    const lastCommitDate = new Date(commits[0].commit.committer.date);
+                    document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+                } else {
+                    document.getElementById('last-updated').innerText = 'No commits found.';
+                }
+            } catch (error) {
+                console.error('Error fetching update time:', error);
+                document.getElementById('last-updated').innerText = 'Error fetching update time.';
+            }
+        }
+
+        async function verifyLastUpdatedTime() {
+            document.getElementById('last-updated').innerText = 'Verifying...';
+            await getLastUpdatedTime();
+            alert("Last modified time has been successfully verified from GitHub API.");
+        }
+
+        // Run both on page load cleanly without overwriting each other
+        window.addEventListener('DOMContentLoaded', () => {
+            displayTotalWordCount();
+            getLastUpdatedTime();
+        });
+    </script>
+</body>
+</html>
