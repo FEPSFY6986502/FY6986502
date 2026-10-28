@@ -46,31 +46,31 @@
         <div id="reading-bar" class="h-full bg-brand-500 w-0 transition-all duration-75"></div>
     </div>
 
-    <!-- 1. MAIN NAVBAR -->
+    <!-- 1. MAIN NAVBAR WITH RECTANGULAR BANNER LOGO -->
     <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur border-b border-slate-200 dark:border-slate-700 no-print">
         <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            
+            <!-- LEFT SIDE: Logo + Title -->
             <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-graduation-cap text-brand-600 text-2xl"></i>
-                <span class="font-bold text-lg hidden sm:inline">Conference Project</span>
+                <!-- Rectangular Image Logo -->
+                <img src="download.png" alt="Project Logo" class="h-8 w-auto object-contain rounded-md">
+                <span class="font-bold text-lg hidden sm:inline text-slate-900 dark:text-white">Conference Project</span>
             </div>
             
+            <!-- RIGHT SIDE: Theme & Print Buttons -->
             <div class="flex items-center space-x-3">
                 <!-- Theme Toggle Button -->
                 <button id="theme-toggle" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
                     <i id="theme-icon" class="fa-solid fa-moon"></i>
                 </button>
                 <!-- Print Button -->
-                <button onclick="window.print()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-sm font-medium flex items-center space-x-2">
+                <button onclick="window.print()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-sm font-medium flex items-center space-x-2 transition-colors">
                     <i class="fa-solid fa-print"></i>
                     <span class="hidden sm:inline">Print / PDF</span>
                 </button>
             </div>
         </div>
     </header>
-
-    <!-- LEFT SIDE: Icon / Image + Title -->
-        <div class="flex items-center space-x-3">
-            <img src="download.png" alt="Project Logo" class="h-8 w-auto object-cover rounded-md">
 
     <!-- 2. MAIN LAYOUT GRID (Sidebar + Content side-by-side) -->
     <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -80,8 +80,8 @@
             <div class="sticky top-24 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
                 <h3 class="font-bold text-slate-900 dark:text-white mb-3 text-sm uppercase tracking-wider">Contents</h3>
                 <nav class="space-y-1 text-sm" id="toc">
-                    <a href="#Introduction_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Abstract</a>
-                    <a href="#Analysis_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700">Section 1</a>
+                    <a href="#Introduction_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Abstract</a>
+                    <a href="#Analysis_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Section 1</a>
                 </nav>
             </div>
         </aside>
@@ -89,13 +89,13 @@
         <!-- MAIN ARTICLE CONTENT (Right Columns) -->
         <main class="lg:col-span-9 space-y-6">
             
-            <div id="Introduction_InText" class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h2 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Abstract</h2>
+            <div id="Introduction_InText" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <h2 class="font-bold text-xl mb-4 text-slate-900 dark:text-white">Abstract</h2>
                 <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Barcelona’s Superblock (Superilla) program is an innovative urban planning concept designed to put people at the center of the city by reallocating spaces that would otherwise be used for vehicles such as cars to pedestrians to encourage active mobility by restructuring the gridded street networks into pedestrian-prioritsed neighborhood units, making the city more walkable as a result with the added bonus of more green spaces. This is a win in terms of social impact, however, there is a disparity between the quality of life in specific areas of the superblocks, with the trend being that the internal streets tend to feel the improvements more than the adjacent arterial corridors, which experience more traffic and higher noise pollution levels. Environmentally, the model delivers on its promises of being more ecologically sound, delivering notable localised reductions in nitrogen dioxide emissions and particulate matter, in tandem with significantly less traffic noise. Furthermore, the increased environmental livability triggers green gentrification and property speculation, which can end up displacing the long-term residents who are supposed to be benefiting from this project. Economically, whilst tactical urbanism enables cost-effective spatial conversion, robust anti-displacement policies mixed with equity-driven site selection are vital to achieve systemic urban justice.</p>
             </div>
 
-            <div id="Analysis_InText" class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h2 class="font-bold text-lg mb-2 text-slate-900 dark:text-white">Section 1</h2>
+            <div id="Analysis_InText" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                <h2 class="font-bold text-xl mb-4 text-slate-900 dark:text-white">Section 1</h2>
                 <p class="text-slate-600 dark:text-slate-300 leading-relaxed">The reallocation of street space from motor vehicles to pedestrians has been one of the many positives of this new Superblocks model. Historically, 85% of roads in Barcelona were dedicated to vehicles, and 60% of public spaces were dedicated to motorized mobility (Amati, 2024), restricting the walkability of the city, overlooking efficient public transportation, which is considered to be a key feature of sustainable city design (SEUX, 2023). This new superblock model, however, aims to have the public space dedicated to pedestrians be no less than 70%, with a bigger focus on streets as the public spaces in contrast to the Modernists’ wide-open parklands, promoting walking through an urban grid. (Amati, 2024). By restructuring the 3x3 grid block units into internal circulation loops that are restricted to 10km/h, the model prevents through traffic whilst maintaining local service access. As a result of the traffic being pushed to the surrounding arterial streets (Rueda 2019) the model aims to lower the levels of noise and air pollution, in addition to converting the car-centered street spaces into green walkable streets, delivering on the promise of more pedestrian spaces.</p>
             </div>
 
