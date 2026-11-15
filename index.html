@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The New Urban Planning Standard or Eco-Gentrification? A Report on Land Use, Livability and Equity in Barcelona's Superblocks</title>
+<html lang="en" class="scrollsmooth">
+    <head>
+        <meta chartset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, inttial-scale=1.0">
+        <title>The New Urban Planning Standard or Eco-Gentrification? A Report on Land Use, Livability and Equity in Barcelona's Superblocks</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <body class="bg-[url('poster-superblocks.webp')] bg-cover bg-center bg-no-repeat bg-fixed text-slate-800 dark:text-slate-100 min-h-screen">
+<script src="https://cdn.tailwindcss.com"></script>
+<body class="bg-url('poster-superblocks.webp')bg-cover bg-center bg-no-repeat bg fixed text-slate-800 dark:test-slate-100 min-h-screen">
 
     <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
+        tailwind.config = {darkMode: 'class', theme: {
                 extend: {
                     colors: {
                         brand: {
@@ -26,173 +24,10 @@
         }
     </script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <style>
-        .fluid-title {
-            font-size: clamp(1.5rem, 3vw + 1rem, 2.75rem);
-        }
-        @media print {
-            .no-print { display: none !important; }
-            body { background: white !important; color: black !important; }
-        }
+        body: {   font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
     </style>
-</head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 min-h-screen transition-colors duration-200">
-
-    <div class="fixed top-0 left-0 w-full h-1.5 bg-slate-200 dark:bg-slate-800 z-50 no-print">
-        <div id="reading-bar" class="h-full bg-brand-500 w-0 transition-all duration-75"></div>
-    </div>
-
-    <header class="sticky top-0 z-40 bg-white/90 dark:bg-slate-800/90 backdrop-blur border-b border-slate-200 dark:border-slate-700 no-print">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            
-            <div class="flex items-center space-x-3">
-   
-                <img src="download.png" alt="Project Logo" class="h-8 w-auto object-contain rounded-md">
-                <span class="font-bold text-lg hidden sm:inline text-slate-900 dark:text-white">The New Urban Planning Standard or Eco-Gentrification? A Report on Land Use, Livability and Equity in Barcelona's Superblocks</span>
-            </div>
-            
-            <div class="flex items-center space-x-3">
-                <button id="theme-toggle" class="p-2.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
-                    <i id="theme-icon" class="fa-solid fa-moon"></i>
-                </button>
-                <button onclick="window.print()" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-sm font-medium flex items-center space-x-2 transition-colors">
-                    <i class="fa-solid fa-print"></i>
-                    <span class="hidden sm:inline">Print / PDF</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- SIDEBAR NAVIGATION (Table of Contents - Left Column) -->
-        <aside class="lg:col-span-3 no-print">
-            <div class="sticky top-24 p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h3 class="font-bold text-slate-900 dark:text-white mb-3 text-sm uppercase tracking-wider">Contents</h3>
-                <nav class="space-y-1 text-sm" id="toc">
-                    <a href="#Introduction_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Abstract</a>
-                    <a href="#Analysis_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Section 1</a>
-                    <a href="#Analysis_InText" class="toc-link block px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300">Section 2</a>
-
-                </nav>
-            </div>
-        </aside>
-
-        <!-- MAIN ARTICLE CONTENT (Right Columns) -->
-        <main class="lg:col-span-9 space-y-6">
-            
-            <div id="Introduction_InText" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h2 class="font-bold text-xl mb-4 text-slate-900 dark:text-white">Intro</h2>
-                <p class="text-slate-600 dark:text-slate-300 leading-relaxed">The Barcelona grid network was originally designed in 1855 by renowned urban planner Ildefons Cerdà to combat issues such as overcrowding, poor ventilation, and disease outbreaks, all of which were plaguing the city (Amati et al., 2023; Castrezzati, 2023). In the 21st century, the new plague has become cars and motorized traffic, with 85% of the roads historically being dedicated to vehicles (Amati et al., 2023). As highlighted by the New York City Department of City Planning (2024), urban design needs to go beyond aesthetics and "enhance people's daily lives" by allowing people to walk comfortably whilst "confronting society's greatest challenges", which in Barcelona’s case entails improving traffic, air quality, and walkability. Barcelona’s Superblocks (Superilles) model does this by restructuring 3x3 grid cells into 10 km/h loops, reallocating over 70% of space to pedestrians (Amati et al., 2023; Anguelovski et al., 2023; Iturralde, 2021). This report aims to evaluate the Superblocks initiative by analysing its land-use and spatial efficiency, analysing the quality-of-life (QoL) split between the internal streets and the perimeter corridors, as well as assessing how environmental progress leads to property speculation and green gentrification (Anguelovski et al., 2023).</p>
-            </div>
-
-            <div id="Analysis_InText" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h2 class="font-bold text-xl mb-4 text-slate-900 dark:text-white">Section 1</h2>
-<p class="text-slate-600 dark:text-slate-300 leading-relaxed">Reallocating street space from motor vehicles to pedestrians has been one of the primary spatial successes of the Barcelona Superblocks model, aligning directly with core urban design principles that prioritize accessibility and safety as well as mobility and connectivity (New York City Department of City Planning [NYC DCP], 2024; Rueda, 2019). Historically, Barcelona’s roads and public spaces were overwhelmingly dedicated to motorized vehicles, at 85% and 60% respectively (Amati et al., 2024). This imbalance severely restricted street walkability and health-supportive open space across the city (Amati et al., 2024; Castrezzati, 2023). The Superblock design model targets allocating no less than 70% of public space to pedestrians, framing streetscapes as primary, multi-use public realms in contrast to relying on isolated Modernist parklands (Amati et al., 2024; Rueda, 2018). The restructuring of 3x3 grid cells into internal 10 km/h circulation loops forces vehicles to turn and exit back to the perimeter roads instead of driving straight through (Amati et al., 2024; Iturralde, 2021). This design eliminates through-traffic while preserving essential access for residential, delivery, and emergency services (Amati et al., 2024; Anguelovski et al., 2023; Iturralde, 2021). By pushing non-local vehicles onto surrounding perimeter corridors, former car-dominated roads are transformed into green, walkable public spaces that foster human connection, active transit, and public health (Amati et al., 2024; Anguelovski et al., 2023; Pérez et al., 2025). Ultimately, while reallocating street space achieves spatial efficiency that fulfills key principles of urban design, redirecting vehicular traffic into perimeter corridors calls into question the socioeconomic and distributional quality-of-life impacts on the residents living along those exterior streets (Anguelovski et al., 2023).            
-            </div>
-    <div id="Analysis_InText" class="bg-white dark:bg-slate-800 p-6 sm:p-8 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <h2 class="font-bold text-xl mb-4 text-slate-900 dark:text-white">Section 2</h2>
-            <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-                <p id="totalWordCount" class="font-semibold text-sm text-slate-800 dark:text-slate-200"></p>
-            </div>
-
-            <div class="p-4 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm flex items-center justify-between">
-                <span id="last-updated" class="text-sm text-slate-600 dark:text-slate-400">Loading last update time...</span>
-                <button onclick="verifyLastUpdatedTime()" class="px-3 py-1.5 bg-brand-600 hover:bg-brand-500 text-white rounded-lg text-xs font-medium transition-colors">
-                    Verify Time
-                </button>
-            </div>
-
-        </main>
-    </div>
-
-    <script>
-        // 1. Dark Theme Toggle Setup
-        function initThemeToggle() {
-            const toggleBtn = document.getElementById('theme-toggle');
-            const themeIcon = document.getElementById('theme-icon');
-            
-            if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-                if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
-            } else {
-                document.documentElement.classList.remove('dark');
-                if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
-            }
-
-            if (toggleBtn) {
-                toggleBtn.addEventListener('click', () => {
-                    document.documentElement.classList.toggle('dark');
-                    const isDark = document.documentElement.classList.contains('dark');
-                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-                    if (themeIcon) themeIcon.className = isDark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-                });
-            }
-        }
-
-        // 2. Reading Progress Bar Listener
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            if (docHeight > 0) {
-                const scrollPercent = (scrollTop / docHeight) * 100;
-                document.getElementById('reading-bar').style.width = scrollPercent + '%';
-            }
-        });
-
-        // 3. Word Count Functions
-        function displayWordCount(sectionId) {
-            const el = document.getElementById(sectionId);
-            if (!el) return 0;
-            const text = el.textContent;
-            return text.trim().split(/\s+/).filter(Boolean).length;
-        }
-
-        function displayTotalWordCount() {
-            const introCount = displayWordCount("Introduction_InText");
-            const analysisCount = displayWordCount("Analysis_InText");
-            const total = introCount + analysisCount;
-            document.getElementById("totalWordCount").innerText = `Total word count: ${total} words`;
-        }
-
-        async function getLastUpdatedTime() {
-            const username = 'FEPSFY6986502';
-            const repo = 'FY6986502';
-            const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-            
-            try {
-                const response = await fetch(url, {
-                    method: 'GET',
-                    headers: { 'Accept': 'application/vnd.github.v3+json' }
-                });
-                if (!response.ok) throw new Error(`Status: ${response.status}`);
-                const commits = await response.json();
-                
-                if (commits && commits.length > 0) {
-                    const lastCommitDate = new Date(commits[0].commit.committer.date);
-                    document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-                } else {
-                    document.getElementById('last-updated').innerText = 'No commits found.';
-                }
-            } catch (error) {
-                console.error('Error fetching update time:', error);
-                document.getElementById('last-updated').innerText = 'Error fetching update time.';
-            }
-        }
-
-        async function verifyLastUpdatedTime() {
-            document.getElementById('last-updated').innerText = 'Verifying...';
-            await getLastUpdatedTime();
-            alert("Last modified time has been successfully verified from GitHub API.");
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            initThemeToggle();
-            displayTotalWordCount();
-            getLastUpdatedTime();
-        });
-    </script>
 </body>
-</html>
